@@ -9,7 +9,7 @@ import Home from '../Components/Home/Home';
 describe('Renders content', () => {
 
   let searchBar: HTMLElement;
-  let titleInput: HTMLElement;
+  let titleInput: HTMLElement; 
   let messageInput: HTMLElement;
   let tags: HTMLElement;
 

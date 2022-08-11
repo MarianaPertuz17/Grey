@@ -46,7 +46,7 @@ describe('Tests for the login screen', () => {
     expect(signInButton).toHaveAttribute('type', 'submit');
     expect(createAccountButton).toHaveAttribute('type', 'button');
   });
-
+ 
 
   test('Login in the website fails when user email doesnt exist in db', async() => {
     fireEvent.change(emailInput, {target: {value: 'wrongemail@gmail.com'}});

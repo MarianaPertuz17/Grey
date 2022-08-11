@@ -34,6 +34,13 @@ const Home: FunctionComponent = () => {
   const editPost = async(post: any) => {
     try {
       const {data} = await api.updatePost(editPostId, post);
+      setPosts((prevState: IPost[]) => {
+        const updatedPosts = prevState.map((post: IPost) => {
+          if(post._id === data._id) return data
+          return post
+        })
+        return updatedPosts;
+      })
     } catch (e) {
       alert(`There has been an error: ${e}`);
     }
